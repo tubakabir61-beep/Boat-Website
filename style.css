@@ -1,0 +1,1029 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+html, body {
+  overflow-x: hidden; /* Horizontal scroll khatam karne ke liye */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: rgb(38, 35, 85);
+  display: flex;
+  justify-content: space-between; /* logo left, menu right */
+  align-items: center;            /* vertically center */
+  height: 60px;
+  padding: 0 100px;               /* left-right spacing */
+}
+
+/* Logo Text */
+.logo {
+  font-size: 22px;                /* ✅ font: size nahi likhna, font-size likhna hai */
+  color: white;
+  font-family: "gill sans", sans-serif;
+  font-weight: bold;
+}
+
+/* Menu Styling */
+.menu {
+  list-style: none;               /* ✅ bullets hatane ke liye */
+  display: flex;
+  gap: 25px;                      /* links ke beech spacing */
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;          /* underline remove */
+  font-size: 18px;
+  transition: 0.3s;
+  font-family:"gill sans", sans-serif ;
+}
+
+.menu a:hover {
+  color: yellow;                  /* hover effect */
+}
+.image{
+    background-image: url(banner.jpg);
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+      display: flex;
+  align-items: center;   /* vertically center */
+  padding-left: 100px;   /* left side space */
+  color: white;
+}
+.imgsec{
+    padding-left:100px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+.helpother{
+    color: rgb(218, 212, 212);
+    padding-bottom: 5px;
+    font-family: "gill sans", sans-serif;
+    font-size: 30px;
+      
+}
+.heading{
+    font-family: "gill sans", sans-serif ;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1;
+      letter-spacing: -2px; 
+}
+.paragraph{
+    font-family:"gill sans", sans-serif;
+    padding-top: 10px;
+    font-size: 17px;
+    color: rgb(245, 245, 245);
+
+}
+.button{
+    border-radius: 54% 0%;
+    height: 40px;
+    width:42%;
+    font-size:15px;
+    padding-left:px;
+   background: #03001e;  /* fallback for old browsers */
+background: #d2ccd8;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #f2ecef, #b493d4, #A770EF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #8005c2, #b122dd, #ef7ed1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      color: white;
+      font-family: "gill sans", sans-serif;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+       border-radius: 20px 0px 20px 0px;
+       margin-top: 15px;
+       border: 2px solid white;
+      
+      
+
+}
+.button:hover {
+  background: linear-gradient(to right, #ef7ed1, #c696d4, #5c0294); /* gradient direction reverse */
+  transform: scale(1.08); /* thoda zoom in effect */
+  box-shadow: 0 0 15px rgba(91, 89, 89, 0.5); /* glowing border */
+  letter-spacing: 1px; /* text thoda spread hoga */
+}
+
+.About-section {
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to left, #0091ff, #0f0cc0);
+}
+
+.About-section h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: rgb(182, 174, 174);
+}
+
+.About-section h2 {
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+
+.programs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 columns */
+  grid-template-rows: repeat(2, auto);     /* 2 rows */
+  gap: 40px;                               /* space between boxes */
+  
+  /* ye teen line sabse important hain 👇 */
+  justify-content: center;  
+  align-content: center;
+  padding: 0 100px;  /* page ke edges se thoda space dene ke liye */
+  margin: 0 auto;    /* grid ko page ke center me lane ke liye */
+  max-width: 1100px; /* grid ki total width limit */
+  
+}
+
+.item {
+  background: #fff;
+  width: 360px;        /* pehle 300px tha — thoda wide */
+  height: 220px;       /* fixed height add ki */
+  border-radius: 12px; /* thoda smooth curve */
+  padding: 40px 25px;
+  color: #000;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  transition: 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* content vertically center */
+}
+
+.item h3{
+    font-family: system-ui;
+    letter-spacing: -1px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.item p{
+   font-family: "gill sans", sans-serif;
+   margin-top: 7px; 
+}
+.item:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.4),
+              0 0 20px rgba(0, 153, 255, 0.6); /* halki blue glow */
+  background: linear-gradient(to bottom right, #ffffff, #e6e6ff);
+}
+.boat {
+    background-image: url(blog.jpg);  /* ya banner.jpg jo chahiye */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 90vh;
+    
+    display: flex;
+    align-items: center;       /* vertically center */
+    justify-content: center;   /* horizontally center */
+
+    color: white;
+    background-color: #f5f5f5; /* fallback color */
+    padding: 50px 20px;       
+}
+
+.foamdiv {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+   background-color: white;
+  
+   font-family: "gill sans", sans-serif;/* optional rounded corners */
+}
+
+
+.foamdiv h2 {
+    font-size: 24px;
+    margin-bottom: 20px;/* space below heading */
+    color: black;
+}
+
+.foamdiv h3 {
+    font-size: 20px;
+    margin-top: 30px;       /* space above h3 */
+    margin-bottom: 15px;    /* space below h3 */
+     color: black;
+}
+
+.foamdiv p, .foamdiv .p3 {
+    font-size: 16px;
+    margin: 0 0 20px 0;     /* space below paragraph */
+    line-height: 1.5;       /* make text more readable */
+     color: black;
+}
+
+.foamdiv hr {
+    margin: 20px 0;          /* space above & below hr */
+    border: 0;               /* remove default border */
+    height: 1px;
+    background-color: #ccc;  /* gray line */
+     color: black;
+}
+
+.button2 {
+    margin-top: 30px;        /* space above button */
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #707305;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #aa7d01, #433b02);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #565207, #FFE000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   border: none;
+}
+.button2:hover {
+  background: linear-gradient(to right, #eef604, #e29404, #f6a104); /* gradient direction reverse */
+  transform: scale(1.08); /* thoda zoom in effect */
+  box-shadow: 0 0 17px rgba(91, 89, 89, 0.5); /* glowing border */
+  letter-spacing: 1px; /* text thoda spread hoga */
+}
+.section4 {
+    display: flex;
+    justify-content: center;   /* dono parts center me */
+    align-items: flex-start;   /* vertically top se start */
+    gap: 80px;                 /* left-right parts ke beech distance */
+    padding: 80px 20px;        /* section ka top-bottom padding */
+    background-color: #f5f5f5;
+    font-family: "gill sans", sans-serif;  
+}
+
+.left-part, .right-part {
+    max-width: 450px;          /* dono parts same width */
+    flex: 1;                   /* flexibly adjust ho */
+}
+
+.left-part h5, .left-part h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.left-part hr{
+   width: 500px;
+  margin: 17px auto;
+  border: 0.7px solid rgb(196, 194, 194);
+}
+
+.left-part h2, .right-part h2 {
+    font-size: 35px;
+
+    margin: 15px 0;
+}
+
+.left-part p, .right-part p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+.button4 {
+    margin-top: 10px;        /* space above button */
+    padding: 12px 25px;
+     background: #707305;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #aa7d01, #433b02);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #e7db04, #fb6e03); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 30px;
+    font-weight: 800;
+    border: none;
+}
+.button4:hover {
+  background: linear-gradient(to right, #eef604, #e29404, #f6a104); /* gradient direction reverse */
+  transform: scale(1.08); /* thoda zoom in effect */
+  box-shadow: 0 0 17px rgba(91, 89, 89, 0.5); /* glowing border */
+  letter-spacing: 1px; /* text thoda spread hoga */
+}
+.section5 {
+    display: flex;
+    flex-direction: column;     
+    align-items: center;        /* horizontal center */
+    justify-content: flex-start; /* top se start */
+    height: 50vh;               
+    text-align: center;         
+    background: linear-gradient(to left, #24243e, #302b63, #0f0c29);
+    color: white;
+    padding-top: 40px;          /* section top se thoda space */
+    gap: 15px;            
+      font-family: "gill sans", sans-serif;      /* h4 aur h2 ke beech spacing */
+}
+
+.section5 h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;                  /* margin reset */
+    color: rgb(182, 174, 174);
+}
+
+.section5 h2 {
+    font-size: 35px;
+    font-weight: 800;
+    margin: 0;                  /* margin reset */
+    color: rgb(255, 253, 253);
+}
+
+
+.purple {
+  display: flex;                    
+  gap: 40px;                        
+  justify-content: space-between;   
+  align-items: flex-start;          /* abhi top aligned hai */
+  padding: 60px 50px 0 50px;        /* top padding add ki → thodi neeche shift */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+.purple .item1 {
+  display: flex;
+  flex-direction: column;           /* vertical stack */
+  justify-content: flex-start;      /* content top aligned */
+  flex: 1;                          /* equal width for all 3 items */
+  text-align: left;
+}
+
+.purple .item1 h4 {
+  margin-bottom: 10px;
+}
+
+.purple .item1 p {
+  margin-bottom: 15px;
+}
+
+.purple .item1 button {
+  align-self: flex-start;           /* button aligned left */
+}
+.activity {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;            /* image aur content ke beech */
+  padding: 40px 50px;    /* section ka padding */
+  background-color: lightblue;
+  flex-wrap: wrap;        /* responsive ke liye */
+}
+
+.activity img {
+ width: 50vh;     /* image ka max size */
+  height: auto;          /* height maintain */
+  object-fit: cover;     
+  border-radius: 10px;   
+}
+
+.activity-content {
+  display: flex;
+  flex-direction: column;  
+  justify-content: flex-start;
+  gap: 15px;
+  width: 50%;            /* content width */
+  max-width: 500px; 
+  padding-top: 200px
+      /* content ka max size */
+}
+
+.activity-content h1 {
+  font-size: 28px;
+  margin: 0;
+   font-family: "gill sans", sans-serif;  
+   font-weight: 800;    /* h4 aur h2 ke beech spacing */
+}
+
+
+.activity-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.activity-content button {
+  width: max-content;
+  align-self: flex-start;
+}
+
+/* Blue section */
+.blog {
+  background-color: #007bff; /* Blue */
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+/* BLUE SECTION */
+.blog {
+ background: #0606eb;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #025cd1, #010123);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #023f84, #01012c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+  padding: 70px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* MAIN CONTENT: IMAGES + TEXT */
+.blog-content {
+  display: flex;
+  justify-content: center;
+   align-items: flex-start;
+  gap: 60px;
+  flex-wrap: nowrap; /* ❌ images upar-neeche na aayen */
+  margin-bottom: 60px;
+  max-width: 1000px;
+}
+
+/* IMAGES WRAPPER */
+.item1, .item2 {
+  text-align: center;
+  width: 300px;
+}
+
+/* HEADING ABOVE IMAGE */
+.item1 h6, .item2 h6 {
+  font-size: 22px;
+  display: flex;
+  justify-content: flex-start;
+font-weight: bold;
+padding-bottom: px;
+   white-space: nowrap;
+  margin-bottom: 10px;
+  font-family: "gill sans", sans-serif; 
+}
+.item1 h4, .item2 h4{
+  padding-top: 15px;
+  color: rgb(169, 169, 169);
+  font-family: "gill sans", sans-serif; 
+  width: 100%;
+  white-space:nowrap
+
+}
+
+/* IMAGE SIZE */
+.item1 img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+
+
+}
+.item2 img{
+    width: 250px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+
+}
+
+/* RIGHT SIDE TEXT */
+.paragraph-blog {
+  max-width: 920px;
+  text-align: left;
+    font-family: "gill sans", sans-serif; 
+}
+
+.paragraph-blog h1 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.paragraph-blog p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.button-foot {
+    margin-top: 10px;        /* space above button */
+    padding: 12px 25px;
+     background: #707305;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #aa7d01, #433b02);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #e7db04, #e53900); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 30px;
+    font-weight: 800;
+    border: none;
+}
+.button-foot:hover {
+  background: linear-gradient(to right, #eef604, #e29404, #f6a104); /* gradient direction reverse */
+  transform: scale(1.08); /* thoda zoom in effect */
+  box-shadow: 0 0 17px rgba(91, 89, 89, 0.5); /* glowing border */
+  letter-spacing: 1px; /* text thoda spread hoga */
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+}
+
+.footer nav {
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: rgb(174, 171, 171);
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* LONG LINE */
+.footer hr {
+  width: 1000px;
+  margin: 17px auto;
+  border: 0.7px solid rgb(129, 127, 127);
+  
+}
+
+.footer p {
+  font-size: 13px;
+  margin-top: 10px;
+  color: #959393;
+}
+/* ✅ FINAL RESPONSIVE FIX */
+@media (max-width: 1200px) {
+  .navbar { padding: 0 50px; }
+  .heading { font-size: 40px; }
+  .About-section h2 { font-size: 30px; }
+  .section4 { gap: 30px; padding: 60px 20px; }
+  .section5 .purple { gap: 20px; padding: 20px; }
+  .activity { gap: 30px; padding: 40px 20px; }
+  .activity img, .activity-content { max-width: 450px; }
+}
+
+/* ===== Mobile (480px - 900px) ===== */
+@media (max-width: 900px) {
+  .navbar { flex-direction: column; padding: 10px 20px; height: auto; }
+  .menu { flex-direction: column; gap: 10px; }
+  .image { flex-direction: column; align-items: center; text-align: center; height: auto; padding: 50px 20px; }
+  .imgsec { padding-left: 0; max-width: 90%; align-items: center; }
+  .heading { font-size: 32px; }
+  .paragraph { font-size: 15px; }
+  .button { width: 70%; }
+  .programs { grid-template-columns: 1fr; padding: 0 20px; }
+  .boat { padding: 40px 20px; }
+  .foamdiv { width: 100%; max-width: 100%; }
+  .section4, .purple, .activity, .blog-content { flex-direction: column; align-items: center; gap: 30px; }
+  .left-part, .right-part, .activity img, .activity-content { max-width: 100%; text-align: center; }
+  .section5 .purple .item1 { max-width: 100%; }
+}
+
+/* ===== Small Mobile (<480px) ===== */
+@media (min-width: 480px) and (max-width:830px) {
+  .logo { font-size: 16px; }
+  .heading { font-size: 28px; }
+  .paragraph { font-size: 14px; }
+  .button, .button2, .button4 { padding: 10px 20px; font-size: 13px; }
+  .imgsec { gap: 10px; }
+  .About-section h2 { font-size: 28px; }
+  .item { padding: 20px 15px; }
+  .section4, .section5, .activity, .blog { padding: 30px 15px; }
+  .activity img, .activity-content { width: 100%; max-width: 100%; }
+   .paragraph-blog{
+    padding-left: 20px;
+   }
+}
+/* ===== 360px Devices ===== */
+@media (max-width: 360px) {
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    overflow-x: hidden; /* horizontal scroll remove */
+    width: 100%;
+  }
+
+  /* Navbar */
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    height: auto;
+  }
+
+  .logo {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .menu {
+    flex-direction: row;
+    width: 100%;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu a {
+    font-size: 14px;
+    display: block;
+    width: 100%;
+  }
+
+  /* Hero Section */
+  .image {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    background-size: cover;
+  }
+
+  .imgsec {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    align-items: center;
+  }
+
+  .heading {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .helpother {
+    font-size: 14px;
+  }
+
+  .paragraph {
+    font-size: 13px;
+  }
+
+  .button {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  /* About Section */
+  .programs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .item {
+    width: 100%;
+    padding: 15px;
+  }
+
+  /* Boat Section */
+  .boat {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .foamdiv {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .foamdiv h2, .foamdiv h3, .foamdiv p {
+    font-size: 14px;
+  }
+
+  .button2 {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  /* Section4 */
+  .section4 {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+
+  .left-part, .right-part {
+    width: 100%;
+    text-align: left;
+  }
+
+  .left-part h2, .right-part h2 {
+    font-size: 18px;
+  }
+
+  .left-part p, .right-part p {
+    font-size: 13px;
+  }
+
+  .button4 {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  /* Section5 */
+  .purple {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .purple .item1 {
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Activity Section */
+  .activity {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+
+  .activity img,
+  .activity-content {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .activity-content h1 {
+    font-size: 18px;
+  }
+
+  .activity-content p {
+    font-size: 13px;
+  }
+
+  .activity-content .button4 {
+    width: 100%;
+  }
+
+  /* Blog Section */
+  .blog-content {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .item1, .item2 {
+    width: 100%;
+    text-align: left;
+  }
+
+  .item1 h6, .item2 h6 {
+    font-size: 12px;
+  }
+
+  .item1 h4, .item2 h4 {
+    font-size: 11px;
+  }
+
+  .item1 img, .item2 img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Footer */
+  .footer a {
+    font-size: 12px;
+    margin: 0 5px;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+
+  .footer hr {
+    width: 95%;
+  }
+}
+/* ======== 1. TABLETS & LARGE PHONES (768px se 1024px) ======== */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 0 30px;
+    }
+
+    .programs {
+        grid-template-columns: repeat(2, 1fr); /* 2 line mein 2 boxes */
+        padding: 0 30px;
+        gap: 20px;
+    }
+
+    .item {
+        width: 100%;
+        height: auto;
+    }
+
+    .section4, 
+    .activity, 
+    .purple {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .activity img {
+        width: 80%;
+    }
+
+    .activity-content {
+        padding-top: 20px;
+        max-width: 100%;
+    }
+}
+
+/* ======== 2. IPHONES & ANDROID (361px se 767px) ======== */
+@media screen and (max-width: 767px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 10px;
+    }
+
+    .menu {
+        margin-top: 15px;
+        gap: 15px;
+    }
+
+    .image {
+        height: auto;
+        padding: 60px 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .imgsec {
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .heading {
+        font-size: 32px;
+    }
+
+    /* Grid boxes ko ek ke niche ek kiya */
+    .programs {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+        gap: 20px;
+    }
+
+    .item {
+        width: 100%;
+        height: auto;
+        padding: 25px;
+    }
+
+    .section5 {
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    /* Gich-pich khatam karne ke liye column layout */
+    .purple {
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .activity img {
+        width: 100%;
+    }
+
+    .blog-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .item1 h4, 
+    .item2 h4 {
+        white-space: normal; /* Text line se bahar nahi jayega */
+    }
+
+    .footer hr {
+        width: 90%;
+    }
+}
+
+/* ======== 3. VERY SMALL PHONES (360px aur niche) ======== */
+@media screen and (max-width: 360px) {
+    .heading {
+        font-size: 26px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .helpother {
+        font-size: 16px;
+    }
+
+    .button {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .heading {
+        font-size: 28px !important; /* Font size kam kiya */
+        line-height: 1.2 !important; /* Gich-pich khatam karne ke liye space */
+        letter-spacing: 0px !important;
+        margin-bottom: 10px;
+    }
+
+    .paragraph {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        color: #f1f1f1;
+    }
+
+    .button {
+        width: 180px !important; /* Fixed width di taake bada na lage */
+        font-size: 13px !important;
+        height: 45px !important;
+    }
+}/* Specific range for mobile screens */
+@media screen and (min-width: 360px) and (max-width: 479px) {
+    .paragraph-blog {
+        padding-left: 20px !important;
+        padding-right: 20px !important; /* Right side se bhi balance rakha hai */
+        text-align: left; /* Aapne padding mangi hai, isliye left alignment best rahegi */
+    }
+
+    .paragraph-blog p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    .button-foot {
+        margin-left: 20px !important; /* Button ko bhi paragraph ke sath align kiya */
+    }
+}
+/* 360px se lekar 1024px (Tablets) tak ke liye Navbar fix */
+@media screen and (min-width: 361px) and (max-width: 1024px) {
+    .navbar {
+        flex-direction: row !important; /* Column se wapas row mein laya */
+        justify-content: space-between !important;
+        height: 70px !important;
+        padding: 0 30px !important;
+    }
+
+    .menu {
+        flex-direction: row !important; /* Links ko ek line mein kiya */
+        gap: 15px !important;
+        margin-top: 0 !important;
+    }
+
+    .menu a {
+        font-size: 15px !important;
+        white-space: nowrap; /* Links niche na girein */
+    }
+
+    .logo {
+        font-size: 18px !important;
+        margin-bottom: 0 !important;
+    }
+}
